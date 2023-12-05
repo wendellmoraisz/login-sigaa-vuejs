@@ -1,25 +1,20 @@
 <template>
   <div id="app" class="container-fluid">
-    <!-- <div class="row"> -->
-      <!-- Lado esquerdo com logos e botões -->
       <div class="col-md-6">
         <header>
-          <!-- Logos aqui -->
           <img src="logo1.png" alt="Logo 1">
           <img src="logo2.png" alt="Logo 2">
         </header>
         <div class="button-container">
-          <!-- Botoes aqui -->
-          <button class="btn btn-primary">Botão 1</button>
-          <button class="btn btn-primary">Botão 2</button>
-          <button class="btn btn-primary">Botão 3</button>
-          <button class="btn btn-primary">Botão 4</button>
-          <button class="btn btn-primary">Botão 5</button>
-          <button class="btn btn-primary">Botão 6</button>
+          <button class="btn btn-primary">SIGAA</button>
+          <button class="btn btn-primary">SIPAC</button>
+          <button class="btn btn-primary">SIGRH</button>
+          <button class="btn btn-primary">SIGPP</button>
+          <button class="btn btn-primary">SIGED</button>
+          <button class="btn btn-primary">SIGAdmin</button>
         </div>
       </div>
 
-      <!-- Lado direito com formulário de login -->
       <div class="col-md-6">
         <div class="login-container">
           <h2 class="login-title">Bem-Vindo</h2>
@@ -33,10 +28,10 @@
               <input type="password" v-model="password" class="form-control" id="password" required>
             </div>
             <button type="submit" class="btn btn-success">Entrar</button>
+            <button type="submit" class="btn btn-login-gov">Entrar com o GOV.BR</button>
           </form>
         </div>
       </div>
-    <!-- </div> -->
   </div>
 </template>
 
@@ -50,18 +45,14 @@ export default {
   },
   methods: {
     login() {
-      // Adicione lógica de autenticação aqui
       console.log('Usuário:', this.username);
       console.log('Senha:', this.password);
-      // Exemplo: redirecione para outra página após o login
-      // this.$router.push('/dashboard');
     }
   }
 };
 </script>
 
 <style scoped>
-/* Estilos específicos do componente aqui */
 
 template {
   margin: 0;
@@ -150,7 +141,6 @@ template {
 }
 
 .form-control {
-  /* border-radius: 10px; */
   margin-bottom: 10px;
 }
 
