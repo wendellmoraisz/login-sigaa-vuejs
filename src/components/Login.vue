@@ -85,6 +85,7 @@ template {
 
 .col-md-6 {
   height: 100%;
+  width: 100%;
 }
 
 /* Lado esquerdo com logos e botões */
