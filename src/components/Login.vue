@@ -112,10 +112,9 @@ template {
 }
 
 .mb-3 input {
-  color: #fff;
   width: 100%;
   border-radius: 4px;
-  padding: 8px;
+  padding: 12px;
   border: none;
 }
 
@@ -125,7 +124,6 @@ template {
 
 .mb-3 label {
   font-size: 16px;
-  margin-bottom: 5px;
   display: block;
 }
 
@@ -135,9 +133,16 @@ template {
   text-align: center;
 }
 
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .form-label {
   text-align: left;
   margin-bottom: 5px;
+  width: 300px;
 }
 
 .form-control {
@@ -149,9 +154,7 @@ template {
   margin-bottom: 20px;
 }
 
-.btn-success {
-  background-color: #e53935;
-  color: #fff;
+.btn {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
@@ -159,6 +162,16 @@ template {
   padding: 8px;
   border: none;
   width: 100%;
+}
+
+.btn-login-gov {
+  background-color: #2245a7;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #e53935;
+  color: #fff;
 }
 
 </style>
