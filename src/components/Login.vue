@@ -2,22 +2,42 @@
   <div id="app" class="container-fluid">
       <div class="col-md-6">
         <header>
-          <img src="logo1.png" alt="Logo 1">
-          <img src="logo2.png" alt="Logo 2">
+          <img src="../assets/img/sigaa_img.jpeg" alt="Logo sigaa" width="200" height="200">
+          <img src="../assets/img/ifpa_img.png" alt="Logo IFPA" width="200" height="200">
         </header>
+
+        <h3 class="texto-title">Sistema Integrado de Gestão de Atividades Acadêmicas</h3>
+
         <div class="button-container">
-          <button class="btn btn-primary">SIGAA</button>
-          <button class="btn btn-primary">SIPAC</button>
-          <button class="btn btn-primary">SIGRH</button>
-          <button class="btn btn-primary">SIGPP</button>
-          <button class="btn btn-primary">SIGED</button>
-          <button class="btn btn-primary">SIGAdmin</button>
+          <a href="https://sig-treinamento.ifpa.edu.br/sigaa/verTelaLogin.do"><button class="btn btn-primary">SIGAA</button></a>
+          <a href="https://sig-treinamento.ifpa.edu.br/sigaa/verTelaLogin.do"><button class="btn btn-primary">SIPAC</button></a>
+          <a href="https://sig-treinamento.ifpa.edu.br/sigaa/verTelaLogin.do"><button class="btn btn-primary">SIGRH</button></a>
+          <a href="https://sig-treinamento.ifpa.edu.br/sigaa/verTelaLogin.do"><button class="btn btn-primary">SIGPP</button></a>
+          <a href="https://sig-treinamento.ifpa.edu.br/sigaa/verTelaLogin.do"><button class="btn btn-primary">SIGED</button></a>
+          <a href="https://sig-treinamento.ifpa.edu.br/sigaa/verTelaLogin.do"><button class="btn btn-primary">SIGAdmin</button></a>
         </div>
-      </div>
+
+        <div class="imagem-cadastro">
+          <img src="../assets/img/professor.png" alt="Logo Professor" width="50" height="50">
+          <img src="../assets/img/aluno.png" alt="Logo Aluno" width="50" height="50">
+        </div>
+
+        <div class="link-cadastro">
+          <p>Professor ou Funcionário,<br>
+            caso ainda não possua cadastro no SIGAA,<br>
+            clique aqui</p>
+
+          <p>Aluno, ou Egresso,<br>
+            caso ainda não possua<br>
+            cadastro no SIGAA,<br>
+            clique aqui</p>
+        </div>
+
+        </div>
 
       <div class="col-md-6">
         <div class="login-container">
-          <h2 class="login-title">Bem-Vindo</h2>
+          <h1 class="login-title">BEM-VINDO</h1>
           <form @submit.prevent="login">
             <div class="mb-3">
               <label for="username" class="form-label">Usuário</label>
@@ -28,11 +48,28 @@
               <input type="password" v-model="password" class="form-control" id="password" required>
             </div>
             <button type="submit" class="btn btn-success">Entrar</button>
-            <button type="submit" class="btn btn-login-gov">Entrar com o GOV.BR</button>
+
           </form>
+          <div class="login-container">
+            <a href="https://www.gov.br/pt-br"><button type="submit" class="btn btn-login-gov">Entrar com o GOV.BR</button></a>
+          </div>
+          <div class="button-container">
+            <h3 class="recuperacao-title">OPÇÕES DE RECUPERAÇÃO</h3>
+            <button class="btn btn-primary">Perdi meu e-mail de confirmação de cadastro</button>
+            <button class="btn btn-primary">Esqueci meu login</button>
+            <button class="btn btn-primary">Esqueci minha senha</button>
+          </div>
+          <p>Este sistema é melhor visualizado utilizando o Mozilla <br>
+             Firefox, para baixá-lo e instalá-lo, <a href="https://www.mozilla.org/pt-BR/firefox/new/">clique aqui.</a></p>
+          <p>Para visualizar documentos é necessário utilizar o<br>
+             Adobe Reader, para baixá-lo e instalá-lo, <a href="https://www.adobe.com/br/acrobat/pdf-reader.html">clique aqui.</a></p>
         </div>
       </div>
   </div>
+  <footer>
+    <p>SIGAA | Diretoria de Tecnologia da Informação e Comunicação - | Copyright © 2006-2023 - IFPA - sigaa-d02 - v3.12</p>
+  </footer>
+
 </template>
 
 <script>
@@ -82,6 +119,7 @@ template {
 /* Lado esquerdo com logos e botões */
 .col-md-6:first-child {
   background-color: #fff;
+  color: black;
   padding: 20px;
 }
 
@@ -92,7 +130,7 @@ template {
 }
 
 .btn-primary {
-  background-color: #1e3a8a;
+  background-color: #385378;
   color: #fff;
   border-radius: 10px;
 }
@@ -100,6 +138,24 @@ template {
 .btn-primary:hover {
   background-color: #dcb078;
   color: #1e3a8a;
+}
+
+.texto-title {
+  text-align: center;
+}
+
+.imagem-cadastro{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin: 20px;
+
+}
+.link-cadastro {
+  text-align: center;
+  margin: 20px;
+  display: flex;
+
 }
 
 /* Lado direito com formulário de login */
@@ -174,5 +230,9 @@ template {
   color: #fff;
 }
 
-</style>
+.recuperacao-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
+</style>
