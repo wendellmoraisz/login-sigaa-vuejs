@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container-fluid">
       <div class="col-md-6">
-        <header>
+        <header class="header-imagens">
           <img src="../assets/img/sigaa_img.jpeg" alt="Logo sigaa" width="200" height="200">
           <img src="../assets/img/ifpa_img.png" alt="Logo IFPA" width="200" height="200">
         </header>
@@ -48,21 +48,23 @@
               <input type="password" v-model="password" class="form-control" id="password" required>
             </div>
             <button type="submit" class="btn btn-success">Entrar</button>
+            <a class="btn btn-login-gov" href="https://www.gov.br/pt-br">Entrar com o GOV.BR</a>
 
           </form>
           <div class="login-container">
-            <a href="https://www.gov.br/pt-br"><button type="submit" class="btn btn-login-gov">Entrar com o GOV.BR</button></a>
           </div>
           <div class="button-container">
             <h3 class="recuperacao-title">OPÇÕES DE RECUPERAÇÃO</h3>
-            <button class="btn btn-primary">Perdi meu e-mail de confirmação de cadastro</button>
-            <button class="btn btn-primary">Esqueci meu login</button>
-            <button class="btn btn-primary">Esqueci minha senha</button>
+            <a href="https://sigadmin.ifpa.edu.br/admin/public/recuperar_codigo.jsf" class="btn btn-primary">Perdi meu e-mail de confirmação de cadastro</a>
+            <a href="https://sigadmin.ifpa.edu.br/admin/public/recuperar_login.jsf" class="btn btn-primary">Esqueci meu login</a>
+            <a href="https://sigadmin.ifpa.edu.br/admin/public/recuperar_senha.jsf" class="btn btn-primary">Esqueci minha senha</a>
           </div>
-          <p>Este sistema é melhor visualizado utilizando o Mozilla <br>
-             Firefox, para baixá-lo e instalá-lo, <a href="https://www.mozilla.org/pt-BR/firefox/new/">clique aqui.</a></p>
-          <p>Para visualizar documentos é necessário utilizar o<br>
-             Adobe Reader, para baixá-lo e instalá-lo, <a href="https://www.adobe.com/br/acrobat/pdf-reader.html">clique aqui.</a></p>
+          <div class="recomendacoes">
+            <p>Este sistema é melhor visualizado utilizando o Mozilla <br>
+              Firefox, para baixá-lo e instalá-lo, <a href="https://www.mozilla.org/pt-BR/firefox/new/">clique aqui.</a></p>
+            <p>Para visualizar documentos é necessário utilizar o<br>
+                Adobe Reader, para baixá-lo e instalá-lo, <a href="https://www.adobe.com/br/acrobat/pdf-reader.html">clique aqui.</a></p>
+          </div>
         </div>
       </div>
   </div>
@@ -97,7 +99,6 @@ template {
 }
 
 #app {
-  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -133,6 +134,7 @@ template {
   background-color: #385378;
   color: #fff;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -155,7 +157,12 @@ template {
   text-align: center;
   margin: 20px;
   display: flex;
+}
 
+.header-imagens {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
 }
 
 /* Lado direito com formulário de login */
@@ -206,6 +213,7 @@ template {
 }
 
 .login-title {
+  font-weight: 500;
   font-size: 2rem;
   margin-bottom: 20px;
 }
@@ -218,6 +226,7 @@ template {
   padding: 8px;
   border: none;
   width: 100%;
+  text-decoration: none;
 }
 
 .btn-login-gov {
@@ -230,9 +239,17 @@ template {
   color: #fff;
 }
 
+.recomendacoes {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #000;
+}
+
 .recuperacao-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  margin-top: 20px;
 }
 
 </style>
