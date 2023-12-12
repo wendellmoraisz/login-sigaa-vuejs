@@ -256,6 +256,10 @@ a {
   text-decoration: none;
 }
 
+.btn:hover {
+  transition: all 0.3s ease;
+}
+
 .btn-login-gov {
   background-color: #2245a7;
   color: #fff;
